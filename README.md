@@ -35,5 +35,14 @@ Copia `.env.example` y completa:
 npm install
 npm run dev
 npm run build
+npm run build:cloudflare
 npm run lint
 ```
+
+## Deploy en Vercel
+
+Usa Framework Preset `Other` y Build Command `npm run build`.
+El build usa `vinext` con `nitro` y genera la salida de Vercel en
+`.vercel/output`.
+
+Para el build Cloudflare/Codex usa `npm run build:cloudflare`.
