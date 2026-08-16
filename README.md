@@ -35,14 +35,21 @@ Copia `.env.example` y completa:
 npm install
 npm run dev
 npm run build
-npm run build:cloudflare
 npm run lint
 ```
 
-## Deploy en Vercel
+## Deploy en Cloudflare Workers
 
-Usa Framework Preset `Nitro` y Build Command `npm run build`.
-El build usa `vinext` con `nitro` y genera la salida Build Output API de
-Vercel en `.vercel/output`.
+Luxora usa la integracion nativa de vinext para Cloudflare Workers con
+`@cloudflare/vite-plugin`.
 
-Para el build Cloudflare/Codex usa `npm run build:cloudflare`.
+Para desplegar:
+
+```bash
+npm ci
+npm run build
+npm run deploy:cloudflare
+```
+
+Antes del primer deploy, autentica Wrangler con `wrangler login` o configura
+`CLOUDFLARE_API_TOKEN` y `CLOUDFLARE_ACCOUNT_ID` en CI.
