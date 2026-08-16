@@ -41,8 +41,8 @@ npm run lint
 
 ## Deploy en Vercel
 
-Usa Framework Preset `Other` y Build Command `npm run build`.
-El build usa `vinext` con `nitro` y genera la salida de Vercel en
-`.vercel/output`.
+Usa Framework Preset `Nitro` y Build Command `npm run build`.
+El build usa `vinext` con `nitro` y genera la salida Build Output API de
+Vercel en `.vercel/output`.
 
 Para el build Cloudflare/Codex usa `npm run build:cloudflare`.
